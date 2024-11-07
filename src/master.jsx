@@ -6,6 +6,7 @@ import Usage from './componets/Usage/usage';
 import Testmonials from './componets/Testmonials/Testmonials';
 import Blogs from './componets/Blogs/Blogs';
 import Price from './componets/price/price';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Master() {
@@ -18,6 +19,7 @@ function Master() {
             <Usage />
             <Testmonials />
             <Blogs />
+            <Footer/>
         </>
     );
 }

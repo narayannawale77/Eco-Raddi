@@ -5,7 +5,7 @@ function Order() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch('https://utsavmehta24.github.io/E-Api/form.json')
+    fetch('http://localhost:8000/users')
       .then(response => response.json())
       .then(data => setOrders(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -16,7 +16,7 @@ function Order() {
     setOrders(orders.filter(order => order.id !== orderId));
 
     // Send a DELETE request to the server to remove the order permanently
-    fetch(`http://localhost:8000/Details/${orderId}`, {
+    fetch(`http://localhost:8000/users/${orderId}`, {
       method: 'DELETE',
     })
       .then(response => {
@@ -52,4 +52,3 @@ function Order() {
 }
 
 export default Order;
-
